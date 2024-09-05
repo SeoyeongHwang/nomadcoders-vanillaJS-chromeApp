@@ -1,0 +1,137 @@
+/* Global styles for text color and shadow */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white; /* Unified text color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Unified text shadow */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background image styling */
+body img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Clock styling */
+#clock {
+    font-size: 72px;
+    margin-bottom: 30px;
+    z-index: 1;
+    color: inherit; /* Inherit global text color */
+    text-shadow: inherit; /* Inherit global text shadow */
+}
+
+/* Login form and To-Do form input fields */
+#login-form input,
+#todo-form input {
+    padding: 12px;
+    font-size: 18px;
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7); /* Add a bottom border */
+    border-radius: 0; /* Remove border-radius */
+    background: transparent; /* Remove background color */
+    color: inherit; /* Inherit global text color */
+    text-shadow: inherit; /* Inherit global text shadow */
+    width: 250px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: border-bottom-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+#login-form input:focus,
+#todo-form input:focus {
+    outline: none; /* Remove default outline on focus */
+    border-bottom-color: white; /* Change border color on focus */
+}
+
+#login-form input::placeholder,
+#todo-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    text-shadow: none; /* Remove text shadow from placeholder text */
+}
+
+/* Greeting message styling */
+#greeting {
+    font-size: 48px;
+    margin-bottom: 30px;
+    z-index: 1;
+    color: inherit; /* Inherit global text color */
+    text-shadow: inherit; /* Inherit global text shadow */
+}
+
+/* To-Do list styling */
+#todo-list {
+    z-index: 1;
+    color: inherit; /* Inherit global text color */
+    text-shadow: inherit; /* Inherit global text shadow */
+}
+
+#todo-list li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#todo-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#todo-list li button {
+    background-color: rgba(255, 59, 48, 0.8);
+    color: inherit; /* Inherit global text color */
+    border: none;
+    border-radius: 15px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#todo-list li button:hover {
+    background-color: rgba(211, 47, 47, 0.8);
+}
+
+/* Quote styling */
+#quote {
+    text-align: center;
+    font-style: italic;
+    margin-top: 40px;
+    z-index: 1;
+    color: inherit; /* Inherit global text color */
+    text-shadow: inherit; /* Inherit global text shadow */
+}
+
+#quote span:first-child {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#quote span:last-child {
+    font-size: 18px;
+}
+
+/* Hidden class styling */
+.hidden {
+    display: none;
+}
